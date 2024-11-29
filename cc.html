@@ -1,23 +1,27 @@
-<html>
-    <p>Red:<input type="range" min="0" max="9" value="0" class="slider" id="R1" style="color: red;"></p>
+<html style="text-align: center; font-family: Arial, Helvetica, sans-serif;">
+    <body onload="color()">
+    <p>Red:<input type="range" min="0" max="9" value="0" class="slider" id="R1" style="color: red;" oninput="color()"><span id="R1Value"></span></p>
     <p></p>
-    <p>Blue:<input type="range" min="0" max="9" value="0" class="slider" id="G1" style="color: green;"></p>
+    <p>Blue:<input type="range" min="0" max="9" value="0" class="slider" id="B1" style="color: green;" oninput="color()"><span id="B1Value"></span></p>
     <p></p>
-    <p>Green:<input type="range" min="0" max="9" value="0" class="slider" id="B1" style="color: blue;"></p>
+    <p>Green:<input type="range" min="0" max="9" value="0" class="slider" id="G1" style="color: blue;" oninput="color()"><span id="G1Value"></span></p>
     <p></p>
     <script>
         function color() {
-            var R1 = document.getElementById("R1");
-            var B1 = document.getElementById("B1");
-            var G1 = document.getElementById("G1");
+            var R1 = document.getElementById("R1").value;
+            var B1 = document.getElementById("B1").value;
+            var G1 = document.getElementById("G1").value;
+
+            document.getElementById("R1Value").textContent = R1;
+            document.getElementById("G1Value").textContent = G1;
+            document.getElementById("B1Value").textContent = B1;
 
             var R2 = R1 * (255/9)
             var B2 = B1 * (255/9)
             var G2 = G1 * (255/9)
-            document.getElementById("rgb").innerHTML = "rgb(" + R2 + ", " + B2 + ", " + G2 + ")"
+            document.getElementById("rgb").innerHTML = "rgb(" + Math.round(R2) + ", " + Math.round(B2) + ", " + Math.round(G2) + ")"
         }
     </script>
-<body onload="color()">
     <h1><span id="rgb"></span></h1>
 </body>
 </html>
