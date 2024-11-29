@@ -6,6 +6,19 @@
     <p>Green:<input type="range" min="0" max="9" value="0" class="slider" id="B1" style="color: blue;"></p>
     <p></p>
     <script>
-        
+        var R1 = document.getElementById("R1");
+        var B1 = document.getElementById("B1");
+        var G1 = document.getElementById("G1");
+
+        var R2 = R1 * (255/9)
+        var B2 = B1 * (255/9)
+        var G2 = G1 * (255/9)
+
+        document.getElementById("R2");
+        document.getElementById("B2");
+        document.getElementById("G2");
+
+        document.write("rgb(" + R2 + ", " + G2 + ", " + B2 + ")")
     </script>
+
 </html>
