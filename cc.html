@@ -2,19 +2,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Color code converter</title>
     <style>
+        h1 {
+            color: white;
+        }
+        h2 {
+            color: white;
+        }
+        h3 {
+            color: white;
+        }
+        h4 {
+            color: white;
+        }
+        h5 {
+            color: white;
+        }
+        h6 {
+            color: white;
+        }
+        p {
+            color: white;
+        }
+        html {
+            background-color: #121212;
+        }
         a {
             text-decoration: none;
-            color: inherit;
+            color: white;
             font-family: Arial, Helvetica, sans-serif;
         }
     </style>
     <a href="index.html" ><img src="gtagctlogo.png" style=" display: block; margin-left: auto; margin-right: auto; width: 25%;"></a>
     <body onload="color()">
-    <p>Red:<input type="range" min="0" max="9" value="0" class="slider" id="R1" style="color: red;" oninput="color()"><span id="R1Value"></span></p>
+    <h3><input type="range" min="0" max="9" value="0" class="slider" id="R1" style="accent-color: red;" oninput="color()">      <span id="R1Value"></span></h3>
     <p></p>
-    <p>Blue:<input type="range" min="0" max="9" value="0" class="slider" id="B1" style="color: green;" oninput="color()"><span id="B1Value"></span></p>
+    <h3><input type="range" min="0" max="9" value="0" class="slider" id="B1" style="accent-color: green;" oninput="color()">    <span id="B1Value"></span></h3>
     <p></p>
-    <p>Green:<input type="range" min="0" max="9" value="0" class="slider" id="G1" style="color: blue;" oninput="color()"><span id="G1Value"></span></p>
+    <h3><input type="range" min="0" max="9" value="0" class="slider" id="G1" style="accent-color: blue;" oninput="color()">     <span id="G1Value"></span></h3>
     <p></p>
     <p>Enable precice measurement:<input type="checkbox" id="isPreciceEnabled" oninput="color()"></input></p>
     <script>
